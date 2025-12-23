@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Миттєва зміна GIF</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fff;
+        }
+        img {
+            cursor: pointer;
+            max-width: 100%;
+            height: auto;
+            border: none;
+            display: block;
+        }
+        /* Приховуємо блок з попереднім завантаженням */
+        #preload-container {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <img id="dynamicGif" src="img/gif1.gif" alt="Натисни!">
+
+    <div id="preload-container"></div>
+
+<script>
+    const totalGifs = 3; // Вкажи свою кількість
+    let currentNumber = 1;
+    const gifElement = document.getElementById('dynamicGif');
+    const preloadContainer = document.getElementById('preload-container');
+
+    // ФУНКЦІЯ ПОПЕРЕДНЬОГО ЗАВАНТАЖЕННЯ
+    function preloadGifs() {
+        for (let i = 1; i <= totalGifs; i++) {
+            const img = new Image();
+            img.src = gif${i}.gif;
+            // Додаємо в прихований div, щоб браузер точно їх завантажив
+            preloadContainer.appendChild(img);
+        }
+    }
+
+    // Запускаємо завантаження всіх файлів відразу при старті
+    preloadGifs();
+
+    gifElement.onclick = function() {
+        currentNumber++;
+
+        if (currentNumber > totalGifs) {
+            currentNumber = 1;
+        }
+
+        // Тепер заміна буде миттєвою, бо файл вже в кеші браузера
+        this.src = gif${currentNumber}.gif;
+    };
+
+    gifElement.onerror = function() {
+        console.error("Помилка завантаження файлу gif" + currentNumber + ".gif");
+    };
+</script>
+
+</body>
+</html>

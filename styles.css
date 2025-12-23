@@ -1,0 +1,217 @@
+body {
+  background: black;
+  margin: 0;
+}
+/* ПАРАГРАФИ */
+h1 {
+  font-family: 'Cutive Mono';
+  font-size: clamp(24px, 5vw, 48px);
+  color: #023e8a;
+  text-align: center;
+  letter-spacing: 15px;
+  margin-bottom: 0px;
+}
+h2 {
+  font-family: 'Sixtyfour';
+  font-size: clamp(24px, 5vw, 48px);
+  color: #023e8a;
+  text-align: center;
+}
+h4 {
+  font-family: 'My Soul';
+  text-align: center;
+  color: #F6F6F6;
+  font-size: 18px;
+}
+h5 {
+  color: #F6F6F6;
+  letter-spacing: 15px;
+  text-align: center;
+  font-family: 'Road Rage';
+  font-size: 20px;
+}
+p {
+  padding: 15;
+  margin: 20px 0;
+  margin-block-start: 2em;
+  margin-block-end: 2em;
+  text-align: left;
+  font-family: 'Martian Mono';
+  font-size: 24px;
+  color: #767f87;
+}
+/* ЗОБРАЖЕННЯ */
+img {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+/* ПОСИЛАННЯ */
+a {
+  min-height: 20px;
+  color:  #F6F6F6;
+  transition: all 0.5s ease-out;
+  border-radius: 10px;
+}
+a:hover {
+  background-color: #0f0f0f;
+  color: #ffffff;
+  transform:scale(1.1); 
+  position: relative;
+  z-index: 99;
+  transition: all 0.5s ease-out;
+}
+a:active {
+  text-align: center;
+  font-weight: bold; 
+  color: black; 
+}
+.links {
+  transition: all 1.3 ease;
+  font-family: 'VT323';
+  font-size: clamp(20px, 4vw, 40px);
+  display: inline-block;
+  padding: 5px 10px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.computer {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 1px;
+    border: 1px;
+    padding-right: 10px;
+
+}
+.computer img {
+  width: 300px;
+  flex-shrink: 0;
+  filter: grayscale(1);
+  transition: filter ease-in-out 0.5s;
+}
+.computer img:hover {
+  filter: grayscale(0);
+}
+
+.vsc {
+  width: 250px;
+}
+
+.instruments {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.instruments img {
+  width: 120px;
+  height: auto;
+  filter: grayscale(1);
+  transition: filter ease-in-out 0.5s;
+}
+.instruments img:hover {
+  filter: grayscale(0);
+}
+
+
+.profile {
+  display: block; 
+  margin-block-start: 3em;
+  margin-block-end: 3em;
+  transition: transform 0.5s ease;
+  border-style: inset;
+  border-color:#023e8a;
+}
+
+.profile:hover {
+  transform:scale(1.05);
+  box-shadow: 0 0 19px #111452;
+  transition: transform 0.5s ease;
+}
+
+.link-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+/* РОЗМІР СТОРІНКИ */
+.size {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+/* ПРОЄКТИ */
+.projects a{
+  color:#023e8a;
+  font-family: 'VT323';
+  font-size: clamp(20px, 4vw, 40px);
+  display: inline-block;
+  padding: 5px 10px;
+  text-align: center;
+  white-space: nowrap;
+}
+.projects a:hover {
+  background-color: #0f0f0f;
+} 
+.small {
+  display: inline-block;
+  transition: transform 1.5s ease-in-out;  
+}
+.small:hover {
+  transition: transform 1.5s ease-in-out;
+  transform: scale(0.2);
+}
+header {
+  background-color: rgb(0, 0, 0);
+  font-size: 24px;
+  color: #023e8a;
+  font-family: 'VT323';
+  z-index: 100;
+  position: fixed;
+  top: 0;             /* ПРИТИСКАЄМО ДО ВЕРХУ */
+  left: 0;            /* ПРИТИСКАЄМО ДО ЛІВОГО КРАЮ */
+  width: 100%; 
+}
+.header-links {
+  max-width: 100%;  /* Така сама ширина, як у .size */
+  margin: 0 auto;    /* Центруємо цей блок */
+  padding: 10px 40px; /* Внутрішні відступи, щоб текст не лип до країв */
+  
+  display: flex;
+  justify-content: flex-end; /* Тепер текст притиснеться до правого краю твоїх 900px */
+  gap: 20px;
+}
+
+/* Щоб посилання в хедері не мали фону при наведенні, якщо ти цього не хочеш */
+.header-links a {
+  text-decoration: none;
+  color: #023e8a;
+}
+
+/* ВИДІЛЕННЯ */
+::selection {
+  background-color:#023e8a;
+  color:#212121;
+}
+
+/* СКЛОБАР */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #023e8a;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #023e8a #0f0f0f;
+}

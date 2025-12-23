@@ -1,0 +1,35 @@
+body {
+    background: black;
+    margin: 0;
+    height: 100vh;
+    display: flex; /* Включаємо Flexbox */
+    flex-direction: column; /* Елементи один під одним */
+    justify-content: center; /* Центрування по вертикалі */
+    align-items: center; /* Центрування по горизонталі */
+    color: #00ff00; /* Зелений текст, як у Lain */
+    font-family: monospace;
+    justify-content: flex-start; /* Притиснути до верху */
+    padding-top: 1px; /* Регулювати точний відступ зверху */
+}
+
+img {
+    max-width: 100%; /* Щоб відео не вилазило за межі */
+    padding-bottom: 30px;
+}
+.lain-wrapper {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease; /* Ефект легкого натискання */
+}
+
+.lain-wrapper:active {
+    transform: scale(0.98); /* Картинка трохи стискається при кліку */
+}
+
+.lain-wrapper img {
+    max-width: 300px; /* Або ваш розмір */
+    height: auto;
+    display: block;
+}

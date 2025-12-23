@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Wazer App</title>
+    <link rel="stylesheet" type="text/css" href="wazer.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=Martian Mono&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
+    </style>
+
+  </head>
+  <body>
+      <h1>Wazer - Weather App</h1>  
+      <br>
+
+<form id="frm1" autocomplete="off">
+    <div class="inputs-container">
+        <label>
+            First number: <input type="text" id="a" required placeholder="(%)">
+        </label>
+        <label>
+            Second number: <input type="text" id="b" required placeholder="(n)">
+        </label>
+        <label>
+            Result: <input type="text" id="result" readonly>
+        </label>
+    </div>
+
+    <div class="buttons-container">
+        <button type="button" class="button" onclick="Calco('C')">C</button>
+        <button type="button" class="button" onclick="Calco('+')">+</button>
+        <button type="button" class="button" onclick="Calco('-')">-</button>
+        <button type="button" class="button" onclick="Calco('*')">*</button>
+        <button type="button" class="button" onclick="Calco('/')">/</button>
+        <button type="button" class="button" onclick="Calco('sqrt')">sqrt</button>
+        <button type="button" class="button" onclick="Calco('%')">%</button>
+        <button type="button" class="button" onclick="Calco('^2')">^2</button>
+        <button type="button" class="button" onclick="Calco('^3')">^3</button>
+        <button type="button" class="button" onclick="Calco('^n')">^n</button>
+        <button type="button" class="button" onclick="Calco('A')">A</button>
+
+        
+    </div>
+</form>
+
+<script src="scripts/calculator.js"></script>
+  </body>
+</html>

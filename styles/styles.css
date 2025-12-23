@@ -175,21 +175,20 @@ header {
   font-family: 'VT323';
   z-index: 100;
   position: fixed;
-  top: 0;             /* ПРИТИСКАЄМО ДО ВЕРХУ */
-  left: 0;            /* ПРИТИСКАЄМО ДО ЛІВОГО КРАЮ */
+  top: 0;
+  left: 0;     
   width: 100%; 
 }
 .header-links {
-  max-width: 100%;  /* Така сама ширина, як у .size */
-  margin: 0 auto;    /* Центруємо цей блок */
-  padding: 10px 40px; /* Внутрішні відступи, щоб текст не лип до країв */
+  max-width: 100%;  
+  margin: 0 auto;    
+  padding: 10px 40px; 
   
   display: flex;
-  justify-content: flex-end; /* Тепер текст притиснеться до правого краю твоїх 900px */
+  justify-content: flex-end; 
   gap: 20px;
 }
 
-/* Щоб посилання в хедері не мали фону при наведенні, якщо ти цього не хочеш */
 .header-links a {
   text-decoration: none;
   color: #023e8a;
@@ -215,3 +214,4 @@ header {
   scrollbar-width: thin;
   scrollbar-color: #023e8a #0f0f0f;
 }
+

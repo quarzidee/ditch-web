@@ -18,15 +18,15 @@ h1 {
 form {
     display: flex;
     text-align: justify;
-    flex-direction: column; /* Розміщуємо елементи в стовпчик */
-    align-items: center;    /* Центруємо все по горизонталі */
-    gap: 20px;              /* Відступ між блоком полів і блоком кнопок */
+    flex-direction: column; 
+    align-items: center;    
+    gap: 20px;              
 }
 
 .inputs-container {
     display: flex;
-    flex-direction: column; /* Поля одне під одним */
-    gap: 10px;               /* <-- ТУТ регулюється розрив між строками вводу */
+    flex-direction: column; 
+    gap: 10px;               
     text-align: justify;
     align-items: center;
     width: 100px;
@@ -50,7 +50,7 @@ input:focus {
 .buttons-container {
     text-align: justify;
     display: flex;
-    gap: 10px;             /* Відстань між кнопками */
+    gap: 10px;             
 }
 .button {
     display: inline-block;
@@ -78,11 +78,11 @@ input {
     background-color: black;
     color: #6D9886;
     text-align: center;
-    border: 1px solid #6D9886; /* Додав рамку, щоб поле було видно на чорному */
+    border: 1px solid #6D9886; 
     padding: 5px;
     font-family: 'Martian Mono', monospace;
 }
- /* The switch - the box around the slider */
+
 .switch {
   position: relative;
   display: inline-block;
@@ -93,14 +93,13 @@ input {
     accent-color: green;
 }
 
-/* Hide default HTML checkbox */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* The slider */
+
 .slider {
   position: absolute;
   cursor: pointer;
@@ -139,7 +138,7 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
+
 .slider.round {
   border-radius: 34px;
 }
@@ -150,4 +149,5 @@ input:checked + .slider:before {
 ::-moz-range-track {
             background: brown;
             height: 0.5rem;
+
         }

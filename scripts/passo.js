@@ -30,5 +30,6 @@ function Passo(a) {
 function CopyPassword() {
     const passwordText = document.getElementById("result").value;
     navigator.clipboard.writeText(passwordText);
-    alert("Пароль скопійовано!");
+    alert("copied");
+
 }

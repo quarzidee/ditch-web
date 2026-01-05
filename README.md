@@ -1,2 +1,2 @@
 # ditch-web
-Autobiography Website
+Autobiography Website with a couple of JavaScript projects.

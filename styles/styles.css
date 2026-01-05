@@ -6,7 +6,7 @@ body {
 h1 {
   font-family: 'Cutive Mono';
   font-size: clamp(24px, 5vw, 48px);
-  color: #023e8a;
+  color: #6D9886; /*023e8a*/
   text-align: center;
   letter-spacing: 15px;
   margin-bottom: 0px;
@@ -14,7 +14,7 @@ h1 {
 h2 {
   font-family: 'Sixtyfour';
   font-size: clamp(24px, 5vw, 48px);
-  color: #023e8a;
+  color: #6D9886;
   text-align: center;
 }
 h4 {
@@ -126,7 +126,7 @@ a:active {
   margin-block-end: 3em;
   transition: transform 0.5s ease;
   border-style: inset;
-  border-color:#023e8a;
+  border-color:#6D9886;
 }
 
 .profile:hover {
@@ -149,7 +149,7 @@ a:active {
 }
 /* ПРОЄКТИ */
 .projects a{
-  color:#023e8a;
+  color:#6D9886;
   font-family: 'VT323';
   font-size: clamp(20px, 4vw, 40px);
   display: inline-block;
@@ -171,7 +171,7 @@ a:active {
 header {
   background-color: rgb(0, 0, 0);
   font-size: 24px;
-  color: #023e8a;
+  color: #6D9886;
   font-family: 'VT323';
   z-index: 100;
   position: fixed;
@@ -191,12 +191,12 @@ header {
 
 .header-links a {
   text-decoration: none;
-  color: #023e8a;
+  color: #6D9886;
 }
 
 /* ВИДІЛЕННЯ */
 ::selection {
-  background-color:#023e8a;
+  background-color:#6D9886;
   color:#212121;
 }
 
@@ -208,10 +208,10 @@ header {
   background: #0f0f0f;
 }
 ::-webkit-scrollbar-thumb {
-  background: #023e8a;
+  background: #6D9886;
 }
 * {
   scrollbar-width: thin;
-  scrollbar-color: #023e8a #0f0f0f;
+  scrollbar-color: #6D9886 #0f0f0f;
 }
 

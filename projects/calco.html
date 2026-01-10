@@ -18,37 +18,46 @@
 
 <form id="frm1" autocomplete="off">
     <div class="inputs-container">
-        <label>
-            First number: <input type="text" id="a" required placeholder="(%)">
-        </label>
-        <label>
-            Second number: <input type="text" id="b" required placeholder="(n)">
-        </label>
-        <label>
-            Result: <input type="text" id="result" readonly>
-        </label>
+        <label>USER INPUT</label>
+        <input type="text" id="inputValue" required placeholder="Enter the task">
+        <label>SYSTEM OUTPUT</label>
+        <input type="text" id="result" readonly>
     </div>
 
     <div class="buttons-container">
-        <button type="button" class="button" onclick="Calco('C')">C</button>
-        <button type="button" class="button" onclick="Calco('+')">+</button>
-        <button type="button" class="button" onclick="Calco('-')">-</button>
-        <button type="button" class="button" onclick="Calco('*')">*</button>
-        <button type="button" class="button" onclick="Calco('/')">/</button>
-        <button type="button" class="button" onclick="Calco('sqrt')">sqrt</button>
-        <button type="button" class="button" onclick="Calco('%')">%</button>
-        <button type="button" class="button" onclick="Calco('^2')">^2</button>
-        <button type="button" class="button" onclick="Calco('^3')">^3</button>
-        <button type="button" class="button" onclick="Calco('^n')">^n</button>
-        <button type="button" class="button" onclick="Calco('A')">A</button>
-        <br>
+        
+        <button type="button" class="button" onclick="Input('0')">0</button>
+        <button type="button" class="button" onclick="Input('1')">1</button>
+        <button type="button" class="button" onclick="Input('2')">2</button>
+        <button type="button" class="button" onclick="Input('3')">3</button>
+        <button type="button" class="button" onclick="Input('4')">4</button>
+        <button type="button" class="button" onclick="Input('5')">5</button>
+        <button type="button" class="button" onclick="Input('6')">6</button>
+        <button type="button" class="button" onclick="Input('7')">7</button>
+        <button type="button" class="button" onclick="Input('8')">8</button>
+        <button type="button" class="button" onclick="Input('9')">9</button>
+        
+        <button type="button" class="button" onclick="Input('+')">+</button>
+        <button type="button" class="button" onclick="Input('-')">-</button>
+        <button type="button" class="button" onclick="Input('*')">*</button>
+        <button type="button" class="button" onclick="Input('/')">/</button>
+        <button type="button" class="button" onclick="Input('Math.sqrt(')">√</button>
+        <button type="button" class="button" onclick="Input('%')">%</button>
+        <button type="button" class="button" onclick="Input('^2')">^2</button>
+        <button type="button" class="button" onclick="Input('^3')">^3</button>
+        <button type="button" class="button" onclick="Input('^')">^n</button>
+        <button type="button" class="button" onclick="Input('.')">.</button>
+        <button type="button" class="button" onclick="Input('(')">(</button>
+        <button type="button" class="button" onclick="Input(')')">)</button>
+        <button type="button" class="button" onclick="Clear()">C</button>
+        <button type="button" class="button" onclick="Calculate()" style="color: black;background-color: rosybrown"> = </button>
         
     </div>
 </form>
 </div>
 </div>
 
-<script src="../scripts/calculator.js"></script>
+<script src="../scripts/calco.js"></script>
   </body>
 </html>
 

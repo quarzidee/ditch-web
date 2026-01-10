@@ -1,54 +1,40 @@
 <!DOCTYPE html>
-<html >
-  <head>
+
+<head>
+    <meta charset="UTF-8">
     <title>Passo App</title>
-    <link rel="stylesheet" type="text/css" href="../styles/calco.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <style type="text/css">
-    @import url('https://fonts.googleapis.com/css?family=Martian Mono&display=swap');
-    @import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
-    </style>
-
-  </head>
-  <body>
-      <h1>Passo - Password Generator</h1>  
-      <br>
-
-<form id="frm1" autocomplete="off">
-    <div class="inputs-container">
-        <label>
-            Password length: <input id="a" class="slider" type="range" min="8" max="50" step="1" value="8">
-        </label>
-        <label>
-            Your password: <input type="text" id="result" placeholder="tiny letters enabled" readonly>
-            <br>
-            <br>
-            <button type="button" class="button" onclick="Passo()">Generate</button>
-            <button type="button" class="button" onclick="CopyPassword()"id="copy">Copy
-        </label>
-    </div>
-
-    <div class="buttons-container">
-        <label class="switch">
-        <input type="checkbox" id="Caps">Big Letters
-        <input type="checkbox" id="Numbers">Numbers
-        <input type="checkbox" id="Symbols">Symbols
-        <input type="checkbox" id="EtR">EtR
-        <input type="checkbox">
-        <span class="slider"></span>
-    </label>
-
-    <label class="switch">
-  <input type="checkbox">
-  <span class="slider round"></span>
-</label>
-        
+    <link rel="stylesheet" type="text/css" href="../styles/passo.css  ">
+   
+</head>
+<body>
 
     
+
+    <div class="screen-container">
+      <h1>Passo - Password Generator</h1>
+        <form id="frm1" autocomplete="off">
+            <div class="inputs-container">
+                <label for="a">PASSWORD LENGTH</label>
+                <input id="a" type="range" min="8" max="50" value="12">
+                
+                <label for="result">SYSTEM OUTPUT</label>
+                <input type="text" id="result" placeholder="READY_FOR_DATA" readonly>
+            </div>
+
+            <div class="options-container">
+                <label><input type="checkbox" id="Caps"> BIG LETTERS</label>
+                <label><input type="checkbox" id="Numbers"> NUMBERS</label>
+                <label><input type="checkbox" id="Symbols"> SYMBOLS</label>
+                <label><input type="checkbox" id="EtR" disabled> EASY TO REMEMBER</label>
+            </div>
+
+            <div class="buttons-container">
+                <button type="button" class="button" onclick="Passo()">Generate</button>
+                <button type="button" class="button" onclick="CopyPassword()">Copy</button>
+            </div>
+        </form>
     </div>
-</form>
 
-<script src="../scripts/passo.js"></script>
-  </body>
+    <script src="../scripts/passo.js"></script>
+</body>
 </html>
-

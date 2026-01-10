@@ -1,73 +1,41 @@
 "use strict";
 
-function Calco(op) {
-    let FieldA = document.getElementById("a");
-    let FieldB = document.getElementById("b");
-    let stA = document.getElementById("a").value;
-    let stB = document.getElementById("b").value;
-    let resultField = document.getElementById("result");
-
-    if(op === 'C') { 
-        FieldA.value = "";
-        FieldB.value = "";
-        resultField.value = "";
-        return;
-    }
-
-    if ((op === 'sqrt' || op === '^2' || op === '^3') && stA.trim() === "") {
-        resultField.value = "Enter A for sqrt!";
-        return;
-    } 
-    
-    if (!(op == 'sqrt' || op == '^2' || op == '^3') && (stA.trim() === "" || stB.trim() === "")) {
-        resultField.value = "Enter both numbers!";
-        return;
-    }
-
-    let a = Number(stA);
-    let b = Number(stB);
-    
-    if(isNaN(a) || isNaN(b)) {
-        resultField.value = "You entered letters!";
-        return;
-    }
-    
-    let result;
-    switch(op) {
-        case '+': result = a + b; break;
-        case '-': result = a - b; break;
-        case '*': result = a * b; break;
-        case '/': 
-            if(b === 0) 
-            {
-                resultField.value = "Cannot divide by 0";
-                return;
-            }
-            result = a / b; break;
-            break;
-        case 'sqrt':
-            b = String(stB);
-            if(FieldB.value.length > 0) {
-                FieldB.value = "";
-            }
-            result = Math.sqrt(a); break;
-        case '%':
-            result = (a * b) / 100; break;
-        case '^2':
-            if(FieldB.value.length > 0) {
-                FieldB.value = "";
-            }
-            result = Math.pow(a,2); break;
-        case '^3':
-            if(FieldB.value.length > 0) {
-                FieldB.value = "";
-            }
-            result = Math.pow(a,3); break;
-        case '^n':
-            result = Math.pow(a,b); break;
-        /*case: 'A':
-            result = a;*/
-    }
-    resultField.value = result.toFixed(4);
-
+function Input(element) {
+    let inputField = document.getElementById("inputValue");
+    inputField.value += element;
 }
+function Clear() {
+    document.getElementById("inputValue").value = "";
+    document.getElementById("result").value = "";
+}
+function Calculate() {
+    let task = document.getElementById("inputValue").value;
+    let resultOutput = document.getElementById("result");
+
+    task = task.replace(/(\d|\))(?=Math|\()/g, '$1*');
+                
+                // Приклад: )( -> )*( або )5 -> )*5
+                task = task.replace(/\)(?=\d|\()/g, ')*');
+
+                // 2. Авто-закриття дужок
+                let countOpen = (task.match(/\(/g) || []).length;
+                let countClose = (task.match(/\)/g) || []).length;
+                while(countOpen > countClose) {
+                    task += ")";
+                    countClose++;
+                }
+
+    try {
+        let countOpen = (task.match(/\(/g) || []).length;
+                let countClose = (task.match(/\)/g) || []).length;
+                while(countOpen > countClose) {
+                    task += ")";
+                    countClose++;
+                }
+        let result = eval(task);
+        resultOutput.value = result;
+    } catch(error) {
+        resultOutput.value = "error!";
+    }
+}
+
